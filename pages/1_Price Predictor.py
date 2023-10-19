@@ -7,10 +7,10 @@ st.set_page_config(page_title="Viz Demo")
 
 
 
-with open('df.pkl','rb') as file:
+with open('cosine_sim1','rb') as file:
     df = pickle.load(file)
 
-with open('pipeline.pkl','rb') as file:
+with open('cosine_sim2','rb') as file:
     pipeline = pickle.load(file)
 
 
@@ -44,8 +44,8 @@ if st.button('Predict'):
     # form a dataframe
     data = [[property_type, sector, bedrooms, bathroom, balcony, property_age, built_up_area, servant_room, store_room, furnishing_type, luxury_category, floor_category]]
     columns = ['property_type', 'sector', 'bedRoom', 'bathroom', 'balcony',
-               'agePossession', 'built_up_area', 'servant room', 'store room',
-               'furnishing_type', 'luxury_category', 'floor_category']
+            'agePossession', 'built_up_area', 'servant room', 'store room',
+            'furnishing_type', 'luxury_category', 'floor_category']
 
     # Convert to DataFrame
     one_df = pd.DataFrame(data, columns=columns)
