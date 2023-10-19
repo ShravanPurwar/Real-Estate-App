@@ -7,10 +7,10 @@ st.set_page_config(page_title="Viz Demo")
 
 
 
-with open('cosine_sim1','rb') as file:
+with open('cosine_sim1.pkl','rb') as file:
     df = pickle.load(file)
 
-with open('cosine_sim2','rb') as file:
+with open('cosine_sim2.pkl','rb') as file:
     pipeline = pickle.load(file)
 
 
